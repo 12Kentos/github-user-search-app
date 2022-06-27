@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | GitHub user search app</title>
+  </head>
+  <body>
+    <div class="header">
+      <p class="header__title">devfinder</p>
+      <div class="java-wrapper">
+        <div class="color-wrapper color-wrapper-dark active-flex">
+          <p class="header__color header__color-dark active">DARK</p>
+          <div class="header__img header__img-moon"></div>
+        </div>
+        <div class="color-wrapper color-wrapper-light">
+          <p class="header__color header__color-light">Light</p>
+          <div class="header__img header__img-sun"></div>
+        </div>
+      </div>
+    </div>
+
+    <form action="#" class="github-form">
+      <button class="github-form__img">
+        <img
+          src="assets/icon-search.svg"
+          alt="Magnifying glass"
+          class="github-form__img-mag"
+        />
+      </button>
+      <input
+        type="text"
+        class="github-form__search"
+        placeholder="Search GitHub username..."
+      />
+      <p class="github-form__no-results">No results</p>
+      <button class="github-form__btn">Search</button>
+    </form>
+
+    <div class="github-profile">
+      <div class="github-profile__header">
+        <img
+          src="assets/test.png"
+          alt="Github profile image"
+          class="github-profile__img"
+        />
+        <div class="github-profile__info">
+          <p class="github-profile__name">The Octocat</p>
+          <p href="#" class="github-profile__at">@octocat</p>
+          <p class="github-profile__date">Joined 25 Jan 2011</p>
+        </div>
+      </div>
+      <p class="github-profile__about">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Donec odio.
+        Quisque volutpat mattis eros.
+      </p>
+      <div class="github-profile__stats">
+        <div class="github-profile__stats-wrapper">
+          <p class="github-profile__repos github-profile__stats-text">Repos</p>
+          <p class="github-profile__repos-number github-profile__stats-number">
+            8
+          </p>
+        </div>
+        <div class="github-profile__stats-wrapper">
+          <p class="github-profile__followers github-profile__stats-text">
+            Followers
+          </p>
+          <p
+            class="github-profile__followers-number github-profile__stats-number"
+          >
+            3938
+          </p>
+        </div>
+        <div class="github-profile__stats-wrapper">
+          <p class="github-profile__following github-profile__stats-text">
+            Following
+          </p>
+          <p
+            class="github-profile__following-number github-profile__stats-number"
+          >
+            9
+          </p>
+        </div>
+      </div>
+      <div class="github-profile__links">
+        <div
+          class="github-profile__links-wrapper github-profile__links-wrapper-map"
+        >
+          <div
+            class="github-profile__links__img github-profile__links__img-map"
+          ></div>
+          <p class="github-profile__links__p github-profile__links__p-map">
+            San Francisco
+          </p>
+        </div>
+
+        <div
+          class="github-profile__links-wrapper github-profile__links-wrapper-links"
+        >
+          <div
+            class="github-profile__links__img github-profile__links__img-links"
+          ></div>
+          <p class="github-profile__links__p github-profile__links__p-links">
+            https:://github.blog
+          </p>
+        </div>
+
+        <div
+          class="github-profile__links-wrapper github-profile__links-wrapper-twitter"
+        >
+          <div
+            class="github-profile__links__img github-profile__links__img-twitter"
+          ></div>
+          <p class="github-profile__links__p github-profile__links__p-twitter">
+            Not Available
+          </p>
+        </div>
+
+        <div
+          class="github-profile__links-wrapper github-profile__links-wrapper-business"
+        >
+          <div
+            class="github-profile__links__img github-profile__links__img-business"
+          ></div>
+          <p class="github-profile__links__p github-profile__links__p-business">
+            @github
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

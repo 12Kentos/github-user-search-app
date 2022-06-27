@@ -1,0 +1,14 @@
+{
+  "name": "github-user-search-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the GitHub user search app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Kent",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

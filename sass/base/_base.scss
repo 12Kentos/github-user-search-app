@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Space Mono, sans-serif;
+  background-color: var(--light-theme-background);
+}
+
+:root {
+  --light-theme-background: #f6f8ff;
+  --light-theme-card-background: #fefefe;
+  --light-theme-main-font-color: #222731;
+  --light-theme-secondary-font-color: #697c9a;
+  --light-theme-tertiairy-font-color: #4b6a9b;
+
+  --dark-theme-switch-color: #90a4d4;
+
+  --btn-color: #0079ff;
+  --color-white: #fff;
+  --color-no-results: #f74646;
+}
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --light-theme-background: #f6f8ff;
+//     --light-theme-card-background: #fefefe;
+//     --light-theme-main-font-color: #222731;
+//     --light-theme-secondary-font-color: #697c9a;
+//     --light-theme-tertiairy-font-color: #4b6a9b;
+
+//     --dark-theme-switch-color: #90a4d4;
+
+//     --btn-color: #0079ff;
+//     --color-white: #fff;
+//     --color-no-results: #f74646;
+//   }
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --light-theme-background: #141d2f;
+//     --light-theme-card-background: #1e2a47;
+//     --light-theme-main-font-color: #fff;
+//     --light-theme-secondary-font-color: #fff;
+//     --light-theme-tertiairy-font-color: #fff;
+
+//     --dark-theme-switch-color: #90a4d4;
+
+//     --btn-color: #0079ff;
+//     --color-white: #fff;
+//     --color-no-results: #f74646;
+//   }
+// }
+
+body[data-theme="light"] {
+  --light-theme-background: #f6f8ff;
+  --light-theme-card-background: #fefefe;
+  --light-theme-main-font-color: #222731;
+  --light-theme-secondary-font-color: #697c9a;
+  --light-theme-tertiairy-font-color: #4b6a9b;
+
+  --dark-theme-switch-color: #90a4d4;
+
+  --btn-color: #0079ff;
+  --color-white: #fff;
+  --color-no-results: #f74646;
+}
+
+body[data-theme="dark"] {
+  --light-theme-background: #141d2f;
+  --light-theme-card-background: #1e2a47;
+  --light-theme-main-font-color: #fff;
+  --light-theme-secondary-font-color: #fff;
+  --light-theme-tertiairy-font-color: #fff;
+
+  --dark-theme-switch-color: #90a4d4;
+
+  --btn-color: #0079ff;
+  --color-white: #fff;
+  --color-no-results: #f74646;
+}

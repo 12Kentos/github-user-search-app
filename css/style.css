@@ -1,0 +1,304 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Space Mono, sans-serif;
+  background-color: var(--light-theme-background); }
+
+:root {
+  --light-theme-background: #f6f8ff;
+  --light-theme-card-background: #fefefe;
+  --light-theme-main-font-color: #222731;
+  --light-theme-secondary-font-color: #697c9a;
+  --light-theme-tertiairy-font-color: #4b6a9b;
+  --dark-theme-switch-color: #90a4d4;
+  --btn-color: #0079ff;
+  --color-white: #fff;
+  --color-no-results: #f74646; }
+
+body[data-theme="light"] {
+  --light-theme-background: #f6f8ff;
+  --light-theme-card-background: #fefefe;
+  --light-theme-main-font-color: #222731;
+  --light-theme-secondary-font-color: #697c9a;
+  --light-theme-tertiairy-font-color: #4b6a9b;
+  --dark-theme-switch-color: #90a4d4;
+  --btn-color: #0079ff;
+  --color-white: #fff;
+  --color-no-results: #f74646; }
+
+body[data-theme="dark"] {
+  --light-theme-background: #141d2f;
+  --light-theme-card-background: #1e2a47;
+  --light-theme-main-font-color: #fff;
+  --light-theme-secondary-font-color: #fff;
+  --light-theme-tertiairy-font-color: #fff;
+  --dark-theme-switch-color: #90a4d4;
+  --btn-color: #0079ff;
+  --color-white: #fff;
+  --color-no-results: #f74646; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 73rem;
+  margin-bottom: 3.6rem; }
+  .header__title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 3.851rem;
+    color: var(--light-theme-main-font-color); }
+  .header__color {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.925rem;
+    letter-spacing: 2.5px;
+    color: var(--light-theme-secondary-font-color); }
+  .header__img {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--light-theme-secondary-font-color);
+    mask-size: 2rem 2rem;
+    -webkit-mask-size: 2rem 2rem;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat; }
+    .header__img-moon {
+      mask-image: url(../assets/icon-moon.svg);
+      -webkit-mask-image: url(../assets/icon-moon.svg); }
+    .header__img-sun {
+      mask-image: url(../assets/icon-sun.svg);
+      -webkit-mask-image: url(../assets/icon-sun.svg); }
+
+.color-wrapper {
+  display: flex;
+  gap: 1.6rem; }
+  .color-wrapper:hover, .color-wrapper:active {
+    cursor: pointer; }
+  .color-wrapper-light {
+    display: none; }
+    .color-wrapper-light:hover .header__color-light,
+    .color-wrapper-light:active .header__color-light {
+      color: var(--dark-theme-switch-color); }
+    .color-wrapper-light:hover .header__img-sun,
+    .color-wrapper-light:active .header__img-sun {
+      background-color: var(--dark-theme-switch-color); }
+  .color-wrapper-dark {
+    display: none; }
+    .color-wrapper-dark:hover .header__color-dark,
+    .color-wrapper-dark:active .header__color-dark {
+      color: var(--light-theme-main-font-color); }
+    .color-wrapper-dark:hover .header__img-moon,
+    .color-wrapper-dark:active .header__img-moon {
+      background-color: var(--light-theme-main-font-color); }
+
+.github-form {
+  width: 100%;
+  max-width: 73rem;
+  background-color: var(--light-theme-card-background);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.4rem;
+  position: relative; }
+  .github-form__img {
+    border: none;
+    background-color: transparent;
+    margin-right: 2.4rem;
+    margin-left: 3.2rem; }
+  .github-form__search {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    color: var(--light-theme-main-font-color);
+    outline: none;
+    caret-color: var(--btn-color); }
+    .github-form__search::placeholder {
+      color: var(--light-theme-tertiairy-font-color); }
+    .github-form__search:hover, .github-form__search:active {
+      cursor: pointer; }
+  .github-form__btn {
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.37rem;
+    background-color: var(--btn-color);
+    color: var(--color-white);
+    padding: 1.25rem 2.4rem;
+    border-radius: 1rem;
+    margin: 0.95rem 1rem; }
+    .github-form__btn:hover, .github-form__btn:active {
+      cursor: pointer; }
+  .github-form__no-results {
+    color: var(--color-no-results);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    position: absolute;
+    right: 13rem;
+    display: none; }
+
+.github-profile {
+  width: 100%;
+  max-width: 73rem;
+  background-color: var(--light-theme-card-background);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 28% 72%;
+  grid-template-rows: 1fr; }
+  .github-profile__header {
+    display: grid;
+    grid-template-columns: 28% 72%;
+    grid-area: 1 / 1 / 2 / 3;
+    margin-top: 4.8rem; }
+  .github-profile__img {
+    max-width: 11.7rem;
+    border-radius: 50%;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-left: 4.8rem; }
+  .github-profile__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40%;
+    max-width: 48rem;
+    width: 100%; }
+  .github-profile__name {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 3.851rem;
+    color: var(--light-theme-main-font-color);
+    align-self: center; }
+  .github-profile__at {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.37rem;
+    color: var(--btn-color);
+    grid-area: 2 / 1 / 3 / 2; }
+    .github-profile__at:link, .github-profile__at:visited {
+      text-decoration: none; }
+  .github-profile__date {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.222rem;
+    color: var(--light-theme-secondary-font-color);
+    align-self: center;
+    justify-self: end; }
+  .github-profile__about {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    color: var(--light-theme-tertiairy-font-color);
+    max-width: 48rem;
+    margin-top: -3rem;
+    margin-bottom: 3.2rem; }
+  .github-profile__stats {
+    grid-area: 3 / 2 / 4 / 3;
+    display: flex;
+    max-width: 48rem;
+    width: 100%;
+    background-color: var(--light-theme-background);
+    gap: 10rem;
+    border-radius: 1rem;
+    margin-bottom: 3.7rem; }
+    .github-profile__stats-wrapper {
+      margin-top: 1.5rem;
+      margin-bottom: 1.7rem; }
+    .github-profile__stats-text {
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.925rem;
+      color: var(--light-theme-tertiairy-font-color); }
+    .github-profile__stats-number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 3.258rem;
+      color: var(--light-theme-main-font-color); }
+  .github-profile__repos, .github-profile__repos-number {
+    margin-left: 3.2rem; }
+  .github-profile__links {
+    grid-area: 4 / 2 / 5 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .github-profile__links-wrapper {
+      display: flex;
+      gap: 1.6rem; }
+      .github-profile__links-wrapper-map {
+        order: -2;
+        margin-bottom: 1.9rem; }
+      .github-profile__links-wrapper-links {
+        order: 1;
+        margin-bottom: 4.8rem; }
+      .github-profile__links-wrapper-twitter {
+        order: -1;
+        margin-bottom: 1.9rem; }
+      .github-profile__links-wrapper-business {
+        order: 2;
+        margin-bottom: 4.8rem; }
+    .github-profile__links__p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2.22rem;
+      color: var(--light-theme-tertiairy-font-color);
+      border-bottom: 1px solid transparent; }
+      .github-profile__links__p:hover, .github-profile__links__p:active {
+        cursor: pointer;
+        border-bottom: 1px solid var(--light-theme-tertiairy-font-color); }
+    .github-profile__links__img {
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--light-theme-tertiairy-font-color);
+      mask-size: 2rem 2rem;
+      -webkit-mask-size: 2rem 2rem;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat; }
+      .github-profile__links__img-map {
+        margin-left: 0.625rem;
+        width: 1.375rem;
+        mask-size: 1.375rem 2rem;
+        mask-image: url(../assets/icon-location.svg);
+        -webkit-mask-image: url(../assets/icon-location.svg); }
+      .github-profile__links__img-links {
+        mask-image: url(../assets/icon-website.svg);
+        -webkit-mask-image: url(../assets/icon-website.svg); }
+      .github-profile__links__img-twitter {
+        mask-image: url(../assets/icon-twitter.svg);
+        -webkit-mask-image: url(../assets/icon-twitter.svg); }
+      .github-profile__links__img-business {
+        mask-image: url(../assets/icon-company.svg);
+        -webkit-mask-image: url(../assets/icon-company.svg); }
+
+.active {
+  display: block; }
+
+.active-flex {
+  display: flex; }
+
+.unavailable-img {
+  background-color: var(--light-theme-tertiairy-font-color);
+  opacity: 0.5; }
+
+.unavailable-text {
+  color: var(--light-theme-tertiairy-font-color);
+  opacity: 0.5; }
+  .unavailable-text:hover {
+    cursor: default;
+    border-bottom: none; }
